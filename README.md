@@ -179,7 +179,7 @@ PERPLEXITY_API_KEY=your_perplexity_api_key_here
 ### 개발 모드 실행
 ```bash
 # 백엔드 (nodemon으로 자동 재시작)
-npm run dev
+set PORT=5001 && npm run dev
 
 # 프론트엔드 (React 개발 서버)
 npm start
