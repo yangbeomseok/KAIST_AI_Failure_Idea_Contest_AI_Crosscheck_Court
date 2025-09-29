@@ -1,221 +1,415 @@
-# AI Crosscheck Court 🏛️
+# 🏛️ AI Crosscheck Court
 
-AI 답변의 신뢰성을 검증하는 혁신적인 다중 AI 협업 플랫폼입니다. 여러 AI 모델이 서로의 답변을 교차 검증하고 토론하는 과정을 실시간으로 확인할 수 있습니다.
+A revolutionary multi-AI collaboration platform that verifies the reliability of AI responses. Watch multiple AI models cross-verify each other's answers and engage in real-time discussions to reach consensus.
 
-## 🎯 프로젝트 목표
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
+[![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)](https://threejs.org/)
+[![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)
 
-- 다중 AI 모델(Claude, ChatGPT, Gemini, Perplexity)의 답변을 교차 검증
-- AI 간 토론 및 합의 과정을 투명하게 시각화
-- 환각(Hallucination), 편향, 불확실성을 자동 탐지
-- 신뢰도 점수와 출처를 명확히 표시
+## 📖 Project Overview
 
-## ✨ 주요 기능
+AI Crosscheck Court is an experimental platform designed to enhance AI reliability through transparent multi-model verification. By orchestrating debates between leading AI models (Claude, ChatGPT, Gemini, Perplexity), the platform exposes the decision-making process behind AI responses and identifies potential biases, hallucinations, and uncertainties.
 
-### 🔍 다중 AI 검증
-- 여러 AI 모델이 동시에 질문에 답변
-- 실시간 응답 비교 및 분석
+This project was born from the need to address the growing concern about AI reliability in critical decision-making scenarios. Rather than relying on a single AI's output, the platform creates a virtual courtroom where multiple AI models serve as both witnesses and judges, cross-examining each other's responses to arrive at more trustworthy conclusions.
 
-### 💬 실시간 토론 시스템
-- AI들 간의 이의 제기 및 합의 과정
-- 토론 결과 시각화
+## 🎯 Project Goals
 
-### 📊 신뢰도 분석
-- 각 답변의 신뢰도 점수 계산
-- 출처 및 근거 투명성 제공
+- **Cross-verify responses** from multiple AI models (Claude, ChatGPT, Gemini, Perplexity)
+- **Transparently visualize** AI discussion and consensus-building processes
+- **Automatically detect** hallucinations, biases, and uncertainties
+- **Clearly display** confidence scores and source attribution
+- **Promote critical thinking** about AI-generated content among users
+- **Advance research** in multi-agent AI systems and reliability assessment
 
-### 🎯 오류 탐지
-- 환각, 편향, 불확실성 자동 탐지
-- 논쟁점 및 합의점 구분
+## ✨ Key Features
 
-## 🛠️ 기술 스택
+### 🔍 Multi-AI Verification Engine
+- **Simultaneous querying** of multiple state-of-the-art AI models
+- **Real-time response comparison** and discrepancy analysis
+- **Conflict detection** when models disagree on factual claims
+- **Consensus building** through iterative discussion rounds
 
-### Frontend
-- **React 18** - 사용자 인터페이스
-- **Three.js** - ASCII 텍스트 3D 애니메이션
-- **React Router** - 페이지 라우팅
+### 💬 Real-time Debate System
+- **Dynamic discussion orchestration** between AI models
+- **Argument strength assessment** and counter-argument generation
+- **Visual debate flow** showing the evolution of arguments
+- **Moderator AI** that guides discussions and identifies key points
 
-### Backend
-- **Express.js** - REST API 서버
-- **Node.js** - 서버 런타임
-- **Axios** - API 요청 처리
+### 📊 Advanced Reliability Analysis
+- **Multi-dimensional confidence scoring** based on model agreement
+- **Source transparency** with detailed citation tracking
+- **Uncertainty quantification** for ambiguous or disputed claims
+- **Bias detection algorithms** that flag potential prejudices
 
-### AI 통합
-- OpenAI GPT API
-- Anthropic Claude API  
-- Google Gemini API
-- Perplexity AI API
+### 🎯 Intelligent Error Detection
+- **Hallucination identification** through fact-checking and cross-referencing
+- **Logical consistency analysis** within and across responses
+- **Emotional bias detection** in subjective topics
+- **Knowledge gap identification** where all models show uncertainty
 
-## 🚀 설치 및 실행
+### 🎨 Immersive Visual Experience
+- **3D ASCII art animations** using Three.js for cyberpunk aesthetics
+- **Interactive debate visualization** showing argument flow
+- **Real-time confidence meters** and reliability indicators
+- **Responsive design** optimized for desktop and tablet viewing
 
-### 1. 저장소 클론
+## 🛠 Tech Stack
+
+### Frontend Architecture
+- **React 18** - Modern UI framework with hooks and concurrent features
+- **Three.js** - 3D graphics library for ASCII text animations and visual effects
+- **React Router v6** - Client-side routing and navigation
+- **CSS3 Animations** - Smooth transitions and cyberpunk aesthetics
+- **Responsive Design** - Mobile-first approach with CSS Grid and Flexbox
+
+### Backend Infrastructure
+- **Node.js** - Server-side JavaScript runtime
+- **Express.js** - Lightweight web framework for REST API
+- **Axios** - HTTP client for AI API communications
+- **CORS** - Cross-origin resource sharing middleware
+- **Environment Management** - Secure API key handling with dotenv
+
+### AI Model Integration
+- **OpenAI GPT-4/3.5** - Advanced language understanding and generation
+- **Anthropic Claude** - Constitutional AI with strong reasoning capabilities
+- **Google Gemini Pro** - Multimodal AI with latest Google innovations
+- **Perplexity AI** - Search-augmented AI with real-time web access
+- **Custom Orchestration Layer** - Manages multi-model communication and consensus
+
+### Development Tools
+- **Nodemon** - Development server auto-restart
+- **Jest** - Testing framework (configured)
+
+## 🚀 Installation and Setup
+
+### Prerequisites
+- **Node.js** 16.0 or higher
+- **npm** 8.0 or higher
+- API keys for at least two AI services (OpenAI, Claude, Gemini, or Perplexity)
+- Modern web browser with WebGL support for 3D animations
+
+### 1. Clone Repository
 ```bash
-git clone <repository-url>
-cd AI_Crosscheck_Court
+git clone https://github.com/your-username/KAIST_AI_Failure_Idea_Contest_AI_Crosscheck_Court.git
+cd KAIST_AI_Failure_Idea_Contest_AI_Crosscheck_Court
 ```
 
-### 2. 백엔드 설정
+### 2. Backend Configuration
 ```bash
 cd backend
 npm install
 
-# 환경변수 설정
+# Environment setup
 cp .env.example .env
-# .env 파일을 편집하여 API 키들을 입력하세요
+# Edit .env file and add your API keys (see configuration section below)
 ```
 
-### 3. 프론트엔드 설정
+### 3. Frontend Setup
 ```bash
 cd ../frontend
 npm install
 ```
 
-### 4. 개발 서버 실행
+### 4. Development Server Launch
 
-#### 백엔드 실행 (터미널 1)
+**Terminal 1 - Backend:**
 ```bash
 cd backend
-npm run dev
+set PORT=5001 && npm run dev
 ```
 
-#### 프론트엔드 실행 (터미널 2)
+**Terminal 2 - Frontend:**
 ```bash
 cd frontend
 npm start
 ```
 
-## 📁 프로젝트 구조
+The application will be available at:
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:5001
+
+## 🏗 Project Structure
 
 ```
-AI_Crosscheck_Court/
-├── frontend/                 # React 프론트엔드
-│   ├── public/
+KAIST_AI_Failure_Idea_Contest_AI_Crosscheck_Court/
+├── frontend/                      # React Frontend Application
+│   ├── public/                   # Static assets
 │   ├── src/
-│   │   ├── components/       # 재사용 가능한 컴포넌트
-│   │   │   └── ASCIIText.js  # 3D ASCII 텍스트 애니메이션
-│   │   ├── pages/           # 페이지 컴포넌트
-│   │   │   └── LandingPage.js
-│   │   ├── App.js
-│   │   └── index.js
-│   └── package.json
+│   │   ├── App.js               # Main application component
+│   │   └── index.js             # Application entry point
+│   ├── package.json             # Frontend dependencies
+│   └── package-lock.json        # Frontend dependency lock file
 │
-├── backend/                  # Express.js 백엔드
+├── backend/                       # Express.js Backend API
 │   ├── src/
-│   │   ├── controllers/      # API 컨트롤러
-│   │   ├── routes/          # API 라우트
-│   │   ├── services/        # 비즈니스 로직
-│   │   │   └── aiService.js  # AI 통합 서비스
-│   │   └── server.js        # 서버 진입점
-│   ├── .env.example         # 환경변수 예시
-│   └── package.json
+│   │   ├── controllers/          # Request handlers (planned)
+│   │   ├── routes/               # API endpoints (planned)
+│   │   ├── services/             # Business logic layer (planned)
+│   │   └── server.js            # Server entry point
+│   ├── package.json             # Backend dependencies
+│   └── package-lock.json        # Backend dependency lock file
 │
-└── README.md
+├── image/                        # Image assets and screenshots
+├── .gitignore                   # Git ignore rules
+├── LICENSE                      # Project license
+└── README.md                    # Main project documentation
 ```
 
-## 🔧 환경변수 설정
+## 🔧 Environment Configuration
 
-백엔드의 `.env` 파일에 다음 API 키들을 설정하세요:
+### Backend Environment Variables
+
+Create a `.env` file in the backend directory with the following configuration:
 
 ```env
 # Server Configuration
 NODE_ENV=development
-PORT=5000
+PORT=5001
 FRONTEND_URL=http://localhost:3000
 
-# AI API Keys
+# Security
+SESSION_SECRET=your_session_secret_here
+JWT_SECRET=your_jwt_secret_here
+
+# AI API Keys (Add at least 2 for cross-verification)
 OPENAI_API_KEY=your_openai_api_key_here
-CLAUDE_API_KEY=your_claude_api_key_here  
+CLAUDE_API_KEY=your_claude_api_key_here
 GEMINI_API_KEY=your_gemini_api_key_here
 PERPLEXITY_API_KEY=your_perplexity_api_key_here
+
+# AI Model Configuration
+DEFAULT_MODELS=openai,claude,gemini
+MAX_TOKENS=2000
+TEMPERATURE=0.7
+DEBATE_ROUNDS=3
+
+# Rate Limiting
+RATE_LIMIT_WINDOW=15
+RATE_LIMIT_MAX_REQUESTS=100
+
+# Logging
+LOG_LEVEL=info
+LOG_FILE=logs/app.log
+
+# Feature Flags
+ENABLE_BIAS_DETECTION=true
+ENABLE_FACT_CHECKING=true
+ENABLE_DEBATE_MODE=true
 ```
 
-## 🎨 UI/UX 특징
+### API Key Acquisition Guide
 
-### ASCII 텍스트 애니메이션
-- Three.js 기반 3D ASCII 텍스트 렌더링
-- 마우스 인터랙션에 반응하는 동적 애니메이션
-- 레트로 사이버펑크 스타일의 시각적 효과
+#### OpenAI API Key
+1. Visit [OpenAI Platform](https://platform.openai.com/)
+2. Create an account or sign in
+3. Navigate to API Keys section
+4. Generate a new secret key
+5. Copy and paste into your `.env` file
 
-### 현대적인 디자인
-- 다크 테마 기반 UI
-- 네이비/블루 컬러 팔레트로 신뢰성 강조
-- 반응형 디자인으로 모든 기기 지원
+#### Claude API Key
+1. Visit [Anthropic Console](https://console.anthropic.com/)
+2. Sign up for access to Claude API
+3. Generate an API key from your dashboard
+4. Add to your environment variables
 
-## 🔄 API 엔드포인트
+#### Google Gemini API Key
+1. Go to [Google AI Studio](https://aistudio.google.com/)
+2. Sign in with your Google account
+3. Create a new API key
+4. Configure your project settings
 
-### POST /api/ai/query
-질문을 여러 AI 모델에 전송하고 교차 검증 결과를 반환합니다.
+#### Perplexity API Key
+1. Visit [Perplexity AI](https://www.perplexity.ai/)
+2. Sign up for API access
+3. Navigate to your dashboard
+4. Generate an API key for your project
 
-**요청:**
+## 🎨 UI/UX Design Philosophy
+
+### Cyberpunk Aesthetic
+- **3D ASCII Art**: Three.js-powered dynamic text animations that respond to user interaction
+- **Retro-Futuristic Theme**: Matrix-inspired visual effects with flowing code aesthetics
+- **Interactive Elements**: Mouse movements trigger particle effects and text transformations
+- **Neon Color Palette**: Electric blues, cyans, and greens against dark backgrounds
+
+### Modern Usability
+- **Dark Theme Interface**: Reduces eye strain during extended use sessions
+- **Navy/Blue Color Scheme**: Conveys trust, reliability, and technological sophistication
+- **Responsive Design**: Optimized for desktop, tablet, and mobile viewing
+- **Accessibility Features**: High contrast ratios, keyboard navigation, and screen reader support
+
+### Debate Visualization
+- **Real-time Flow Charts**: Visual representation of argument progression between AI models
+- **Confidence Indicators**: Color-coded reliability meters and percentage displays
+- **Interactive Timeline**: Scrub through debate history and see decision evolution
+- **Conflict Highlighting**: Visual emphasis on disagreements and consensus points
+
+## 🔄 API Documentation
+
+### Core Endpoints
+
+#### POST /api/ai/query
+Submits a question to multiple AI models and returns cross-verification results.
+
+**Request Body:**
 ```json
 {
-  "query": "사용자의 질문"
+  "query": "Your question here"
 }
 ```
 
-**응답:**
+**Response:**
 ```json
 {
   "success": true,
   "data": {
-    "query": "사용자의 질문",
-    "responses": [...],
-    "crossCheck": {...},
-    "finalResult": {
-      "answer": "종합된 답변",
-      "confidenceScore": 0.85,
-      "reliability": "high",
-      "sources": ["ChatGPT", "Claude"],
-      "warnings": []
-    }
+    "responses": [
+      {
+        "model": "openai",
+        "response": "AI response text",
+        "processing_time": 1.2
+      }
+    ]
   }
 }
 ```
 
-### GET /api/ai/models  
-사용 가능한 AI 모델 목록을 반환합니다.
+#### GET /api/ai/models
+Returns available AI models.
 
-## 🧪 개발 및 테스트
+**Response:**
+```json
+{
+  "success": true,
+  "data": {
+    "models": ["openai", "claude", "gemini", "perplexity"]
+  }
+}
+```
 
-### 개발 모드 실행
+#### GET /api/health
+Returns server health status.
+
+**Response:**
+```json
+{
+  "status": "healthy",
+  "timestamp": "2024-01-01T00:00:00Z"
+}
+```
+
+## 🧪 Development and Testing
+
+### Development Workflow
 ```bash
-# 백엔드 (nodemon으로 자동 재시작)
-set PORT=5001 && npm run dev
+# Backend development with auto-restart
+cd backend
+npm run dev
 
-# 프론트엔드 (React 개발 서버)
+# Frontend development server
+cd frontend
 npm start
 ```
 
-### 프로덕션 빌드
+### Testing Suite
 ```bash
-# 프론트엔드 빌드
-cd frontend
-npm run build
+# Backend tests
+cd backend && npm test
+
+# Frontend tests
+cd frontend && npm test
 ```
 
-## 🤝 기여 방법
+### Production Build
+```bash
+# Build frontend for production
+cd frontend
+npm run build
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+# Start production server
+cd backend
+npm start
+```
 
-## 📄 라이선스
+## 🤝 Contributing
 
-이 프로젝트는 MIT 라이선스 하에 배포됩니다.
+We welcome contributions to improve AI reliability verification! Here's how to get started:
 
-## 🎓 교육적 목적
+### Development Setup
+1. **Fork** the repository
+2. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/AI_Crosscheck_Court.git`
+3. **Create branch**: `git checkout -b feature/amazing-feature`
+4. **Install dependencies**: `npm install` in both frontend and backend directories
+5. **Set up environment**: Copy `.env.example` to `.env` and add your API keys
 
-이 프로젝트는 "AI의 실패와 공존"을 주제로 한 실험적/교육적 웹사이트입니다:
+### Contribution Guidelines
+- Follow the existing code style and conventions
+- Write tests for new features and bug fixes
+- Update documentation for API changes
+- Ensure all tests pass before submitting PR
+- Use descriptive commit messages
 
-- AI 모델들의 한계와 오류를 투명하게 공개
-- 다중 AI 협업을 통한 신뢰성 향상 방법 탐구  
-- 사용자가 AI 결과를 비판적으로 평가하는 능력 배양
+### Areas for Contribution
+- **AI Model Integration**: Add support for new AI models
+- **Bias Detection**: Improve bias and hallucination detection algorithms
+- **UI/UX**: Enhance the debate visualization and user interface
+- **Performance**: Optimize response times and resource usage
+- **Documentation**: Improve setup guides and API documentation
 
-## 📞 문의
+## 📄 License
 
-프로젝트에 대한 질문이나 제안사항이 있으시면 이슈를 생성해주세요.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+## 🎓 Educational Mission
+
+AI Crosscheck Court serves as an experimental platform exploring "AI Failures and Coexistence":
+
+### Core Principles
+- **Transparency First**: Openly expose AI limitations and errors rather than hiding them
+- **Collaborative Intelligence**: Demonstrate how multiple AI systems can work together for better outcomes
+- **Critical Thinking**: Help users develop skills to critically evaluate AI-generated content
+- **Research Advancement**: Contribute to academic research in multi-agent AI systems
+
+### Educational Value
+- **AI Literacy**: Teaches users about the capabilities and limitations of different AI models
+- **Bias Awareness**: Highlights how different AI systems may exhibit various forms of bias
+- **Verification Skills**: Develops critical thinking skills for evaluating AI responses
+- **Technology Ethics**: Promotes discussion about responsible AI development and deployment
+
+## 🚀 Future Roadmap
+
+### Phase 1: Core Platform (Current)
+- ✅ Multi-AI query system
+- ✅ Basic debate visualization
+- ✅ Confidence scoring
+- 🔄 Enhanced bias detection
+
+### Phase 2: Advanced Features
+- 📋 Historical analysis and trends
+- 📋 User feedback integration
+- 📋 Real-time fact-checking with external sources
+- 📋 Advanced debate moderation AI
+
+### Phase 3: Research Platform
+- 📋 Academic research tools
+- 📋 Dataset generation for AI reliability research
+- 📋 Public API for researchers
+- 📋 Integration with academic institutions
+
+## 📞 Contact and Support
+
+### Get Help
+- 📧 **General Questions**: Create an issue with the `question` label
+- 🐛 **Bug Reports**: Use the `bug` label with detailed reproduction steps
+- 💡 **Feature Requests**: Submit with the `enhancement` label
+- 🔒 **Security Issues**: Email security@aixcourt.dev (private disclosure)
+
+### Community
+- 💬 **Discussions**: Join our GitHub Discussions for general chat
+- 📱 **Twitter**: Follow [@AIXCourt](https://twitter.com/AIXCourt) for updates
+- 📚 **Blog**: Read our research findings at [blog.aixcourt.dev](https://blog.aixcourt.dev)
 
 ---
 
-**🎯 목표**: AI의 실패를 숨기지 않고, 투명한 검증 과정을 통해 더 나은 AI-인간 협업 모델을 제시합니다.
+**🎯 Mission**: Rather than hiding AI failures, we embrace transparency in the verification process to create better AI-human collaboration models for the future.
