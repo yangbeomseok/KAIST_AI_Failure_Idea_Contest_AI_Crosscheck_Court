@@ -9,13 +9,13 @@ A revolutionary multi-AI collaboration platform that verifies the reliability of
 
 ## 📖 Project Overview
 
-AI Crosscheck Court is an experimental platform designed to enhance AI reliability through transparent multi-model verification. By orchestrating debates between leading AI models (Claude, ChatGPT, Gemini, Perplexity), the platform exposes the decision-making process behind AI responses and identifies potential biases, hallucinations, and uncertainties.
+AI Crosscheck Court is an experimental platform designed to enhance AI reliability through transparent multi-model verification. By orchestrating debates between leading AI models (Claude, ChatGPT, Gemini, Perplexity, Grok, CLOVA X), the platform exposes the decision-making process behind AI responses and identifies potential biases, hallucinations, and uncertainties.
 
 This project was born from the need to address the growing concern about AI reliability in critical decision-making scenarios. Rather than relying on a single AI's output, the platform creates a virtual courtroom where multiple AI models serve as both witnesses and judges, cross-examining each other's responses to arrive at more trustworthy conclusions.
 
 ## 🎯 Project Goals
 
-- **Cross-verify responses** from multiple AI models (Claude, ChatGPT, Gemini, Perplexity)
+- **Cross-verify responses** from multiple AI models (Claude, ChatGPT, Gemini, Perplexity, Grok, CLOVA X)
 - **Transparently visualize** AI discussion and consensus-building processes
 - **Automatically detect** hallucinations, biases, and uncertainties
 - **Clearly display** confidence scores and source attribution
@@ -71,10 +71,12 @@ This project was born from the need to address the growing concern about AI reli
 - **Environment Management** - Secure API key handling with dotenv
 
 ### AI Model Integration
-- **OpenAI GPT-4/3.5** - Advanced language understanding and generation
-- **Anthropic Claude** - Constitutional AI with strong reasoning capabilities
-- **Google Gemini Pro** - Multimodal AI with latest Google innovations
-- **Perplexity AI** - Search-augmented AI with real-time web access
+- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/75f525a9-bff6-40db-a1e2-ac7380d295ec" /> **OpenAI GPT-4/3.5** - Advanced language understanding and generation
+- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/1f51309c-e56f-4f67-8a24-f354a193dbe1" /> **Anthropic Claude** - Constitutional AI with strong reasoning capabilities
+- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/a2dae770-9774-4e5a-ad92-cdfa98c153bd" /> **Google Gemini Pro** - Multimodal AI with latest Google innovations
+- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/bba146cb-a262-49c7-9836-bb3391ac1d60"  /> **Perplexity AI** - Search-augmented AI with real-time web access
+- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/2a60b965-b2e5-4d94-92a9-25960577fb99" /> **Grok AI** - X's AI model with real-time information access (mock implementation for testing)
+- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/3d8a14d8-4b0d-4043-8f15-c80e24d946be" /> **CLOVA X** - NAVER's advanced Korean-optimized language model (mock implementation for testing)
 - **Custom Orchestration Layer** - Manages multi-model communication and consensus
 
 ### Development Tools
@@ -86,7 +88,7 @@ This project was born from the need to address the growing concern about AI reli
 ### Prerequisites
 - **Node.js** 16.0 or higher
 - **npm** 8.0 or higher
-- API keys for at least two AI services (OpenAI, Claude, Gemini, or Perplexity)
+- API keys for at least two AI services (OpenAI, Claude, Gemini, Perplexity, Grok, or CLOVA X)
 - Modern web browser with WebGL support for 3D animations
 
 ### 1. Clone Repository
@@ -116,7 +118,7 @@ npm install
 **Terminal 1 - Backend:**
 ```bash
 cd backend
-set PORT=5001 && npm run dev
+npm run dev
 ```
 
 **Terminal 2 - Frontend:**
@@ -177,9 +179,11 @@ OPENAI_API_KEY=your_openai_api_key_here
 CLAUDE_API_KEY=your_claude_api_key_here
 GEMINI_API_KEY=your_gemini_api_key_here
 PERPLEXITY_API_KEY=your_perplexity_api_key_here
+GROK_API_KEY=your_grok_api_key_here
+CLOVA_X_API_KEY=your_clova_x_api_key_here
 
 # AI Model Configuration
-DEFAULT_MODELS=openai,claude,gemini
+DEFAULT_MODELS=openai,claude,gemini,grok,clova_x
 MAX_TOKENS=2000
 TEMPERATURE=0.7
 DEBATE_ROUNDS=3
@@ -224,6 +228,20 @@ ENABLE_DEBATE_MODE=true
 2. Sign up for API access
 3. Navigate to your dashboard
 4. Generate an API key for your project
+
+#### Grok API Key
+1. Visit [X AI](https://x.ai/)
+2. Sign up for Grok API access
+3. Navigate to your developer console
+4. Generate an API key for your project
+*Note: Currently using mock implementation for testing purposes*
+
+#### CLOVA X API Key
+1. Visit [NAVER Cloud Platform](https://www.ncloud.com/)
+2. Sign up and access CLOVA Studio
+3. Enable CLOVA X API access
+4. Generate API credentials from your console
+*Note: Currently using mock implementation for testing purposes*
 
 ## 🎨 UI/UX Design Philosophy
 
@@ -283,7 +301,7 @@ Returns available AI models.
 {
   "success": true,
   "data": {
-    "models": ["openai", "claude", "gemini", "perplexity"]
+    "models": ["openai", "claude", "gemini", "perplexity", "grok", "clova_x"]
   }
 }
 ```
@@ -305,7 +323,7 @@ Returns server health status.
 ```bash
 # Backend development with auto-restart
 cd backend
-npm run dev
+set PORT=5001 && npm run dev
 
 # Frontend development server
 cd frontend
@@ -403,13 +421,6 @@ AI Crosscheck Court serves as an experimental platform exploring "AI Failures an
 - 📧 **General Questions**: Create an issue with the `question` label
 - 🐛 **Bug Reports**: Use the `bug` label with detailed reproduction steps
 - 💡 **Feature Requests**: Submit with the `enhancement` label
-- 🔒 **Security Issues**: Email security@aixcourt.dev (private disclosure)
-
-### Community
-- 💬 **Discussions**: Join our GitHub Discussions for general chat
-- 📱 **Twitter**: Follow [@AIXCourt](https://twitter.com/AIXCourt) for updates
-- 📚 **Blog**: Read our research findings at [blog.aixcourt.dev](https://blog.aixcourt.dev)
-
----
+- 🔒 **Security Issues**: Email kmou20201305@g.kmou.ac.kr
 
 **🎯 Mission**: Rather than hiding AI failures, we embrace transparency in the verification process to create better AI-human collaboration models for the future.
