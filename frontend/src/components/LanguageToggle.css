@@ -1,0 +1,65 @@
+.language-toggle {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 25px;
+  padding: 0.3rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.language-toggle:hover {
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.1);
+}
+
+.lang-button {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.lang-button:hover {
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.lang-button.active {
+  color: #000000;
+  background: linear-gradient(135deg, #00ffff 0%, #0080ff 100%);
+  box-shadow: 0 1px 4px rgba(0, 255, 255, 0.2);
+}
+
+.lang-button.active:hover {
+  background: linear-gradient(135deg, #33ffff 0%, #3399ff 100%);
+  transform: translateY(-1px);
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .language-toggle {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.2rem;
+  }
+  
+  .lang-button {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    min-width: 45px;
+  }
+}

@@ -1,0 +1,33 @@
+/* 기본 설정 */
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 영문 환경: 모든 텍스트를 Sansation으로 */
+body.english-text, 
+body.english-text * {
+  font-family: 'Sansation', -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
+}
+
+/* 한글 환경: 영문은 Sansation, 한글은 Pretendard - 순서가 중요! */
+body.korean-text, 
+body.korean-text * {
+  font-family: 'Sansation', "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif !important;
+}
+
+/* 기본 코드 폰트 */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/* 영어 환경에서 코드 폰트 */
+body.english-text code {
+  font-family: 'Sansation', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+}
+
+/* 한글 환경에서 코드 폰트 */
+body.korean-text code {
+  font-family: "Pretendard", source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace !important;
+}

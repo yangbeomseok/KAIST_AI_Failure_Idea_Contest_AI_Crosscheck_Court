@@ -1,0 +1,20 @@
+.background-layout {
+  min-height: 100vh;
+  background: #000000;
+  position: relative;
+}
+
+.background-layout .background-rays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+}

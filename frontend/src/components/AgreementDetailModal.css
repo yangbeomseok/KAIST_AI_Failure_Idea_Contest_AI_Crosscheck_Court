@@ -1,0 +1,484 @@
+/* Agreement Detail Modal */
+.agreement-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.agreement-modal-content {
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideIn 0.4s ease-out;
+  box-shadow: 0 25px 50px rgba(0, 255, 255, 0.2);
+}
+
+.agreement-modal-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0.05));
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 18px 18px 0 0;
+}
+
+.agreement-title {
+  flex: 1;
+}
+
+.gemini-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.analyzer-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 20%;
+}
+
+.analyzer-label {
+  font-size: 0.9rem;
+  color: #4285f4;
+  font-family: "Pretendard", 'Sansation', monospace;
+  font-weight: 500;
+}
+
+.agreement-title h2 {
+  font-size: 1.5rem;
+  font-family: "Pretendard", 'Sansation', monospace;
+  color: #00ffff;
+  margin: 0;
+  font-weight: 600;
+}
+
+.agreement-close-button {
+  background: none;
+  border: none;
+  color: #00ffff;
+  font-size: 2rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.agreement-close-button:hover {
+  background: rgba(0, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+.agreement-modal-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Modal Section Cards */
+.modal-section-card {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.modal-section-card:hover {
+  border-color: rgba(0, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* Agreement Content */
+.agreement-content-section h3 {
+  font-family: "Pretendard", 'Sansation', monospace;
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+/* Section headers - 모든 섹션 제목에 적절한 간격 추가 */
+.modal-section-card h3 {
+  font-family: "Pretendard", 'Sansation', monospace;
+  color: #00ffff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.agreement-content-box {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+/* Bilingual Content Styles */
+.bilingual-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.content-kr, .content-en,
+.reasoning-kr, .reasoning-en {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+}
+
+.content-kr h4, .content-en h4,
+.reasoning-kr h4, .reasoning-en h4 {
+  font-family: "Pretendard", 'Sansation', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.content-kr h4, .reasoning-kr h4 {
+  color: #ff4d6d; /* 한국어는 빨간색 계열 */
+}
+
+.content-en h4, .reasoning-en h4 {
+  color: #4dabf7; /* 영어는 파란색 계열 */
+}
+
+.content-kr p, .content-en p,
+.reasoning-kr p, .reasoning-en p {
+  color: #ffffff;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.bilingual-reasoning {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.agreement-content-box p {
+  color: #ffffff;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Confidence Display */
+.confidence-display {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.confidence-circle-small {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.confidence-fill-small {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.confidence-fill-small::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: #1a1a1a;
+  border-radius: 50%;
+}
+
+.confidence-percent-small {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  font-family: "Pretendard", 'Sansation', monospace;
+  z-index: 1;
+  position: relative;
+}
+
+.confidence-description p {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* AI Models Grid */
+.participating-ais-section {
+  padding-bottom: 0.5rem;
+}
+
+.ai-models-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.ai-model-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.ai-model-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(0, 255, 255, 0.4);
+  background: rgba(0, 255, 255, 0.1);
+}
+
+.ai-model-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.ai-model-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20%;
+}
+
+.ai-model-letter {
+  width: 100%;
+  height: 100%;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.ai-model-name {
+  font-family: "Pretendard", 'Sansation', monospace;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Analysis Sections */
+.analysis-reasoning-section,
+.analysis-method-section {
+  background: rgba(0, 255, 255, 0.03);
+  border-left: 4px solid #00ffff;
+  padding: 1.5rem;
+  border-radius: 0 12px 12px 0;
+}
+
+.reasoning-content,
+.method-content {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.reasoning-content p,
+.method-content p {
+  margin: 0;
+}
+
+/* Evidence Quotes */
+.quotes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.quote-item {
+  background: rgba(0, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.quote-item:hover {
+  border-color: rgba(0, 255, 255, 0.4);
+  background: rgba(0, 255, 255, 0.08);
+}
+
+.quote-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.quote-model-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.quote-model-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 20%;
+}
+
+.quote-model-letter {
+  width: 100%;
+  height: 100%;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.quote-model-name {
+  font-family: "Pretendard", 'Sansation', monospace;
+  color: #00ffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.quote-content {
+  padding-left: 2.5rem;
+}
+
+.quote-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Metadata */
+.analysis-metadata {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.metadata-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.metadata-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metadata-label {
+  font-family: "Pretendard", 'Sansation', monospace;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.metadata-value {
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Animations */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .agreement-modal-content {
+    width: 95%;
+    max-height: 95vh;
+  }
+  
+  .agreement-modal-header {
+    padding: 1.5rem;
+  }
+  
+  .agreement-modal-body {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .ai-models-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .confidence-display {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .metadata-grid {
+    grid-template-columns: 1fr;
+  }
+}

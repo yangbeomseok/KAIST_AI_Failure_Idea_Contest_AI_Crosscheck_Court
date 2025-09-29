@@ -1,0 +1,235 @@
+.landing-page {
+  min-height: 100vh;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  position: relative;
+}
+
+.background-rays {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.hero-section {
+  height: 55vh;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 4vh;
+  z-index: 2;
+  margin-bottom: -12vh;
+}
+
+.ascii-container {
+  width: 100%;
+  height: 45vh;
+  position: relative;
+  max-width: 3000px;
+}
+
+.content-section {
+  padding: 1.5vh 2rem 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.description h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #00ffff 0%, #0080ff 50%, #0040ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.description > p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00ffaa;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  letter-spacing: 1px;
+  white-space: pre-line;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  border-color: rgba(100, 181, 246, 0.3);
+  box-shadow: 0 10px 30px rgba(100, 181, 246, 0.1);
+}
+
+.feature h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.feature p {
+  color: #00aa88;
+  line-height: 1.6;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.primary-button, .secondary-button, .tertiary-button {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+}
+
+.primary-button {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  color: white;
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3);
+}
+
+.secondary-button {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.tertiary-button {
+  background: transparent;
+  color: #b0bec5;
+  border: 1px solid rgba(176, 190, 197, 0.3);
+}
+
+.tertiary-button:hover {
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.additional-info {
+  text-align: center;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.additional-info p {
+  color: #78909c;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+}
+
+.additional-info strong {
+  color: #64b5f6;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    height: 50vh;
+    padding-top: 6vh;
+    margin-bottom: -6vh;
+  }
+  
+  .ascii-container {
+    width: 100%;
+    height: 40vh;
+  }
+  
+  .description h2 {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  
+  .description > p {
+    font-size: 1.1rem;
+  }
+  
+  .content-section {
+    padding: 1vh 1rem 0.5rem 1rem;
+  }
+  
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: 45vh;
+    padding-top: 5vh;
+    margin-bottom: -5vh;
+  }
+  
+  .ascii-container {
+    height: 35vh;
+  }
+  
+  .description h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+  }
+}

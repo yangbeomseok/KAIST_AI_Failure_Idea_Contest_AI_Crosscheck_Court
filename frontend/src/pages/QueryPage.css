@@ -1,0 +1,96 @@
+.query-page {
+  min-height: 100vh;
+  color: #ffffff;
+}
+
+.query-page-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2rem 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.home-button-fixed {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  color: #00ffff;
+  border-radius: 25px;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.home-button-fixed:hover {
+  background: rgba(0, 255, 255, 0.1);
+  border-color: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 2px 8px rgba(0, 255, 255, 0.1);
+  transform: translateX(-2px);
+}
+
+.query-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.query-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #00ffff 0%, #0080ff 50%, #0040ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.query-subtitle {
+  font-size: 1.2rem;
+  color: #00ffaa;
+  font-family: "Pretendard", 'Sansation', sans-serif;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.query-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.results-section {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .query-page-container {
+    padding: 1rem;
+  }
+  
+  .query-header {
+    padding-top: 2rem;
+  }
+  
+  .query-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+  }
+  
+  .query-subtitle {
+    font-size: 1rem;
+  }
+}
