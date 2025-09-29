@@ -1,8 +1,12 @@
 # Dependencies
-node_modules/
+/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Production build
+build/
+dist/
 
 # Environment variables
 .env
@@ -11,20 +15,16 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# Production build
-build/
-dist/
+# IDE settings
+.vscode/
+.idea/
+
+# Cache
+.cache/
 
 # Logs
 *.log
 
-# IDE
-.vscode/
-.idea/
-
-# OS
+# Operating System files
 .DS_Store
 Thumbs.db
-
-# Cache
-.cache/
