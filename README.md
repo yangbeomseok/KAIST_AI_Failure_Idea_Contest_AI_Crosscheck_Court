@@ -93,8 +93,8 @@ This project was born from the need to address the growing concern about AI reli
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/KAIST_AI_Failure_Idea_Contest_AI_Crosscheck_Court.git
-cd KAIST_AI_Failure_Idea_Contest_AI_Crosscheck_Court
+git clone https://github.com/your-username/AI_Crosscheck_Court.git
+cd AI_Crosscheck_Court
 ```
 
 ### 2. Backend Configuration
@@ -134,7 +134,7 @@ The application will be available at:
 ## 🏗 Project Structure
 
 ```
-KAIST_AI_Failure_Idea_Contest_AI_Crosscheck_Court/
+AI_Crosscheck_Court/
 ├── frontend/                      # React Frontend Application
 │   ├── public/                   # Static assets
 │   ├── src/
