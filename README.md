@@ -1,426 +1,128 @@
-# 🏛️ AI Crosscheck Court
+# AI Crosscheck Court
 
-A revolutionary multi-AI collaboration platform that verifies the reliability of AI responses. Watch multiple AI models cross-verify each other's answers and engage in real-time discussions to reach consensus.
+여러 AI 모델에 동일한 질문을 던지고, 응답을 교차 검증하여 신뢰도를 평가하는 플랫폼입니다. AI의 할루시네이션과 편향을 탐지하기 위해 만들었습니다.
 
-[![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)](https://reactjs.org/)
-[![Three.js](https://img.shields.io/badge/Three.js-000000?style=flat&logo=three.js&logoColor=white)](https://threejs.org/)
-[![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)](https://expressjs.com/)
+## 동작 방식
 
-## 📖 Project Overview
+1. 사용자가 질문을 입력합니다
+2. Claude, Gemini, Perplexity 등 여러 AI 모델에 동시에 질문을 전송합니다
+3. 각 응답에 대해 신뢰도 점수를 산출합니다 (출처 신뢰성, 사실 정확도, 논리적 일관성 등)
+4. Gemini API를 통해 응답 간 합의/불일치/할루시네이션을 분석합니다
+5. 신뢰도가 높은 응답에 가중치를 두어 최종 통합 답변을 생성합니다
 
-AI Crosscheck Court is an experimental platform designed to enhance AI reliability through transparent multi-model verification. By orchestrating debates between leading AI models (Claude, ChatGPT, Gemini, Perplexity, Grok, CLOVA X), the platform exposes the decision-making process behind AI responses and identifies potential biases, hallucinations, and uncertainties.
+## 주요 기능
 
-This project was born from the need to address the growing concern about AI reliability in critical decision-making scenarios. Rather than relying on a single AI's output, the platform creates a virtual courtroom where multiple AI models serve as both witnesses and judges, cross-examining each other's responses to arrive at more trustworthy conclusions.
+- **멀티 AI 검증** - 최대 6개 모델의 응답을 동시에 비교합니다
+- **신뢰도 점수** - 다차원 지표 기반으로 각 응답의 신뢰도를 수치화합니다
+- **할루시네이션 탐지** - 모델 간 교차 검증으로 허위 정보를 식별합니다
+- **편향 감지** - 특정 모델의 편향된 응답을 감지합니다
+- **합의 분석** - 모델 간 일치/불일치 지점을 시각화합니다
 
-## 🎯 Project Goals
+## 🛠 기술 스택
 
-- **Cross-verify responses** from multiple AI models (Claude, ChatGPT, Gemini, Perplexity, Grok, CLOVA X)
-- **Transparently visualize** AI discussion and consensus-building processes
-- **Automatically detect** hallucinations, biases, and uncertainties
-- **Clearly display** confidence scores and source attribution
-- **Promote critical thinking** about AI-generated content among users
-- **Advance research** in multi-agent AI systems and reliability assessment
+### Frontend
+| 기술 | 용도 |
+|------|------|
+| React 18 | UI 프레임워크 |
+| Three.js | 3D ASCII 텍스트 애니메이션 |
+| React Router v6 | 클라이언트 라우팅 |
 
-## ✨ Key Features
+### Backend
+| 기술 | 용도 |
+|------|------|
+| Node.js + Express | REST API 서버 |
+| Axios | AI API 통신 |
+| dotenv | 환경변수 관리 |
 
-### 🔍 Multi-AI Verification Engine
-- **Simultaneous querying** of multiple state-of-the-art AI models
-- **Real-time response comparison** and discrepancy analysis
-- **Conflict detection** when models disagree on factual claims
-- **Consensus building** through iterative discussion rounds
+### AI 모델
+| 모델 | 상태 |
+|------|------|
+| Anthropic Claude | API 연동 |
+| Google Gemini Pro | API 연동 |
+| Perplexity AI | API 연동 |
+| OpenAI GPT-4 | Mock |
+| Grok AI | Mock |
+| CLOVA X | Mock |
 
-### 💬 Real-time Debate System
-- **Dynamic discussion orchestration** between AI models
-- **Argument strength assessment** and counter-argument generation
-- **Visual debate flow** showing the evolution of arguments
-- **Moderator AI** that guides discussions and identifies key points
+## 📁 프로젝트 구조
 
-### 📊 Advanced Reliability Analysis
-- **Multi-dimensional confidence scoring** based on model agreement
-- **Source transparency** with detailed citation tracking
-- **Uncertainty quantification** for ambiguous or disputed claims
-- **Bias detection algorithms** that flag potential prejudices
-
-### 🎯 Intelligent Error Detection
-- **Hallucination identification** through fact-checking and cross-referencing
-- **Logical consistency analysis** within and across responses
-- **Emotional bias detection** in subjective topics
-- **Knowledge gap identification** where all models show uncertainty
-
-### 🎨 Immersive Visual Experience
-- **3D ASCII art animations** using Three.js for cyberpunk aesthetics
-- **Interactive debate visualization** showing argument flow
-- **Real-time confidence meters** and reliability indicators
-- **Responsive design** optimized for desktop and tablet viewing
-
-## 🛠 Tech Stack
-
-### Frontend Architecture
-- **React 18** - Modern UI framework with hooks and concurrent features
-- **Three.js** - 3D graphics library for ASCII text animations and visual effects
-- **React Router v6** - Client-side routing and navigation
-- **CSS3 Animations** - Smooth transitions and cyberpunk aesthetics
-- **Responsive Design** - Mobile-first approach with CSS Grid and Flexbox
-
-### Backend Infrastructure
-- **Node.js** - Server-side JavaScript runtime
-- **Express.js** - Lightweight web framework for REST API
-- **Axios** - HTTP client for AI API communications
-- **CORS** - Cross-origin resource sharing middleware
-- **Environment Management** - Secure API key handling with dotenv
-
-### AI Model Integration
-- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/75f525a9-bff6-40db-a1e2-ac7380d295ec" /> **OpenAI GPT-4/3.5** - Advanced language understanding and generation
-- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/1f51309c-e56f-4f67-8a24-f354a193dbe1" /> **Anthropic Claude** - Constitutional AI with strong reasoning capabilities
-- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/a2dae770-9774-4e5a-ad92-cdfa98c153bd" /> **Google Gemini Pro** - Multimodal AI with latest Google innovations
-- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/bba146cb-a262-49c7-9836-bb3391ac1d60"  /> **Perplexity AI** - Search-augmented AI with real-time web access
-- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/2a60b965-b2e5-4d94-92a9-25960577fb99" /> **Grok AI** - X's AI model with real-time information access (mock implementation for testing)
-- <img width="30" height="30" alt="Image" src="https://github.com/user-attachments/assets/3d8a14d8-4b0d-4043-8f15-c80e24d946be" /> **CLOVA X** - NAVER's advanced Korean-optimized language model (mock implementation for testing)
-- **Custom Orchestration Layer** - Manages multi-model communication and consensus
-
-### Development Tools
-- **Nodemon** - Development server auto-restart
-- **Jest** - Testing framework (configured)
-
-## 🚀 Installation and Setup
-
-### Prerequisites
-- **Node.js** 16.0 or higher
-- **npm** 8.0 or higher
-- API keys for at least two AI services (OpenAI, Claude, Gemini, Perplexity, Grok, or CLOVA X)
-- Modern web browser with WebGL support for 3D animations
-
-### 1. Clone Repository
-```bash
-git clone https://github.com/your-username/AI_Crosscheck_Court.git
-cd AI_Crosscheck_Court
+```
+├── frontend/
+│   └── src/
+│       ├── components/        # UI 컴포넌트
+│       ├── contexts/          # 언어 전환 Context
+│       └── pages/             # 랜딩, 쿼리 페이지
+├── backend/
+│   └── src/
+│       ├── controllers/       # 요청 핸들러
+│       ├── routes/            # API 라우트
+│       ├── services/
+│       │   ├── aiService.js          # AI 모델 통신
+│       │   ├── advancedAnalytics.js  # 신뢰도 점수 산출
+│       │   └── consensusAnalyzer.js  # 합의 분석
+│       └── server.js
+└── image/                     # AI 모델 아이콘
 ```
 
-### 2. Backend Configuration
+## 설치 및 실행
+
+### 요구사항
+- Node.js 16.0+
+- AI API 키 2개 이상 (Claude, Gemini, Perplexity 중)
+
+### 설정
+
+```bash
+git clone https://github.com/yangbeomseok/ai_crosscheck_court.git
+cd ai_crosscheck_court
+```
+
+백엔드 환경변수를 설정합니다.
+
 ```bash
 cd backend
 npm install
-
-# Environment setup
 cp .env.example .env
-# Edit .env file and add your API keys (see configuration section below)
 ```
 
-### 3. Frontend Setup
+`.env` 파일에 API 키를 입력합니다.
+
+```env
+PORT=5001
+OPENAI_API_KEY=your_key
+CLAUDE_API_KEY=your_key
+GEMINI_API_KEY=your_key
+PERPLEXITY_API_KEY=your_key
+```
+
+프론트엔드를 설치합니다.
+
 ```bash
 cd ../frontend
 npm install
 ```
 
-### 4. Development Server Launch
+### 실행
 
-**Terminal 1 - Backend:**
 ```bash
-cd backend
-npm run dev
+# 터미널 1 - 백엔드
+cd backend && npm run dev
+
+# 터미널 2 - 프론트엔드
+cd frontend && npm start
 ```
 
-**Terminal 2 - Frontend:**
-```bash
-cd frontend
-npm start
-```
+- Frontend: http://localhost:3000
+- Backend: http://localhost:5001
 
-The application will be available at:
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5001
+## API
 
-## 🏗 Project Structure
+| Method | Endpoint | 설명 |
+|--------|----------|------|
+| POST | `/api/ai/query` | AI 모델에 질문 전송 및 교차 검증 |
+| GET | `/api/ai/models` | 사용 가능한 AI 모델 목록 |
+| GET | `/api/health` | 서버 상태 확인 |
 
-```
-AI_Crosscheck_Court/
-├── frontend/                      # React Frontend Application
-│   ├── public/                   # Static assets
-│   ├── src/
-│   │   ├── App.js               # Main application component
-│   │   └── index.js             # Application entry point
-│   ├── package.json             # Frontend dependencies
-│   └── package-lock.json        # Frontend dependency lock file
-│
-├── backend/                       # Express.js Backend API
-│   ├── src/
-│   │   ├── controllers/          # Request handlers (planned)
-│   │   ├── routes/               # API endpoints (planned)
-│   │   ├── services/             # Business logic layer (planned)
-│   │   └── server.js            # Server entry point
-│   ├── package.json             # Backend dependencies
-│   └── package-lock.json        # Backend dependency lock file
-│
-├── image/                        # Image assets and screenshots
-├── .gitignore                   # Git ignore rules
-├── LICENSE                      # Project license
-└── README.md                    # Main project documentation
-```
+## 📄 라이선스
 
-## 🔧 Environment Configuration
-
-### Backend Environment Variables
-
-Create a `.env` file in the backend directory with the following configuration:
-
-```env
-# Server Configuration
-NODE_ENV=development
-PORT=5001
-FRONTEND_URL=http://localhost:3000
-
-# Security
-SESSION_SECRET=your_session_secret_here
-JWT_SECRET=your_jwt_secret_here
-
-# AI API Keys (Add at least 2 for cross-verification)
-OPENAI_API_KEY=your_openai_api_key_here
-CLAUDE_API_KEY=your_claude_api_key_here
-GEMINI_API_KEY=your_gemini_api_key_here
-PERPLEXITY_API_KEY=your_perplexity_api_key_here
-GROK_API_KEY=your_grok_api_key_here
-CLOVA_X_API_KEY=your_clova_x_api_key_here
-
-# AI Model Configuration
-DEFAULT_MODELS=openai,claude,gemini,grok,clova_x
-MAX_TOKENS=2000
-TEMPERATURE=0.7
-DEBATE_ROUNDS=3
-
-# Rate Limiting
-RATE_LIMIT_WINDOW=15
-RATE_LIMIT_MAX_REQUESTS=100
-
-# Logging
-LOG_LEVEL=info
-LOG_FILE=logs/app.log
-
-# Feature Flags
-ENABLE_BIAS_DETECTION=true
-ENABLE_FACT_CHECKING=true
-ENABLE_DEBATE_MODE=true
-```
-
-### API Key Acquisition Guide
-
-#### OpenAI API Key
-1. Visit [OpenAI Platform](https://platform.openai.com/)
-2. Create an account or sign in
-3. Navigate to API Keys section
-4. Generate a new secret key
-5. Copy and paste into your `.env` file
-
-#### Claude API Key
-1. Visit [Anthropic Console](https://console.anthropic.com/)
-2. Sign up for access to Claude API
-3. Generate an API key from your dashboard
-4. Add to your environment variables
-
-#### Google Gemini API Key
-1. Go to [Google AI Studio](https://aistudio.google.com/)
-2. Sign in with your Google account
-3. Create a new API key
-4. Configure your project settings
-
-#### Perplexity API Key
-1. Visit [Perplexity AI](https://www.perplexity.ai/)
-2. Sign up for API access
-3. Navigate to your dashboard
-4. Generate an API key for your project
-
-#### Grok API Key
-1. Visit [X AI](https://x.ai/)
-2. Sign up for Grok API access
-3. Navigate to your developer console
-4. Generate an API key for your project
-*Note: Currently using mock implementation for testing purposes*
-
-#### CLOVA X API Key
-1. Visit [NAVER Cloud Platform](https://www.ncloud.com/)
-2. Sign up and access CLOVA Studio
-3. Enable CLOVA X API access
-4. Generate API credentials from your console
-*Note: Currently using mock implementation for testing purposes*
-
-## 🎨 UI/UX Design Philosophy
-
-### Cyberpunk Aesthetic
-- **3D ASCII Art**: Three.js-powered dynamic text animations that respond to user interaction
-- **Retro-Futuristic Theme**: Matrix-inspired visual effects with flowing code aesthetics
-- **Interactive Elements**: Mouse movements trigger particle effects and text transformations
-- **Neon Color Palette**: Electric blues, cyans, and greens against dark backgrounds
-
-### Modern Usability
-- **Dark Theme Interface**: Reduces eye strain during extended use sessions
-- **Navy/Blue Color Scheme**: Conveys trust, reliability, and technological sophistication
-- **Responsive Design**: Optimized for desktop, tablet, and mobile viewing
-- **Accessibility Features**: High contrast ratios, keyboard navigation, and screen reader support
-
-### Debate Visualization
-- **Real-time Flow Charts**: Visual representation of argument progression between AI models
-- **Confidence Indicators**: Color-coded reliability meters and percentage displays
-- **Interactive Timeline**: Scrub through debate history and see decision evolution
-- **Conflict Highlighting**: Visual emphasis on disagreements and consensus points
-
-## 🔄 API Documentation
-
-### Core Endpoints
-
-#### POST /api/ai/query
-Submits a question to multiple AI models and returns cross-verification results.
-
-**Request Body:**
-```json
-{
-  "query": "Your question here"
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "data": {
-    "responses": [
-      {
-        "model": "openai",
-        "response": "AI response text",
-        "processing_time": 1.2
-      }
-    ]
-  }
-}
-```
-
-#### GET /api/ai/models
-Returns available AI models.
-
-**Response:**
-```json
-{
-  "success": true,
-  "data": {
-    "models": ["openai", "claude", "gemini", "perplexity", "grok", "clova_x"]
-  }
-}
-```
-
-#### GET /api/health
-Returns server health status.
-
-**Response:**
-```json
-{
-  "status": "healthy",
-  "timestamp": "2024-01-01T00:00:00Z"
-}
-```
-
-## 🧪 Development and Testing
-
-### Development Workflow
-```bash
-# Backend development with auto-restart
-cd backend
-set PORT=5001 && npm run dev
-
-# Frontend development server
-cd frontend
-npm start
-```
-
-### Testing Suite
-```bash
-# Backend tests
-cd backend && npm test
-
-# Frontend tests
-cd frontend && npm test
-```
-
-### Production Build
-```bash
-# Build frontend for production
-cd frontend
-npm run build
-
-# Start production server
-cd backend
-npm start
-```
-
-## 🤝 Contributing
-
-We welcome contributions to improve AI reliability verification! Here's how to get started:
-
-### Development Setup
-1. **Fork** the repository
-2. **Clone** your fork: `git clone https://github.com/YOUR_USERNAME/AI_Crosscheck_Court.git`
-3. **Create branch**: `git checkout -b feature/amazing-feature`
-4. **Install dependencies**: `npm install` in both frontend and backend directories
-5. **Set up environment**: Copy `.env.example` to `.env` and add your API keys
-
-### Contribution Guidelines
-- Follow the existing code style and conventions
-- Write tests for new features and bug fixes
-- Update documentation for API changes
-- Ensure all tests pass before submitting PR
-- Use descriptive commit messages
-
-### Areas for Contribution
-- **AI Model Integration**: Add support for new AI models
-- **Bias Detection**: Improve bias and hallucination detection algorithms
-- **UI/UX**: Enhance the debate visualization and user interface
-- **Performance**: Optimize response times and resource usage
-- **Documentation**: Improve setup guides and API documentation
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-## 🎓 Educational Mission
-
-AI Crosscheck Court serves as an experimental platform exploring "AI Failures and Coexistence":
-
-### Core Principles
-- **Transparency First**: Openly expose AI limitations and errors rather than hiding them
-- **Collaborative Intelligence**: Demonstrate how multiple AI systems can work together for better outcomes
-- **Critical Thinking**: Help users develop skills to critically evaluate AI-generated content
-- **Research Advancement**: Contribute to academic research in multi-agent AI systems
-
-### Educational Value
-- **AI Literacy**: Teaches users about the capabilities and limitations of different AI models
-- **Bias Awareness**: Highlights how different AI systems may exhibit various forms of bias
-- **Verification Skills**: Develops critical thinking skills for evaluating AI responses
-- **Technology Ethics**: Promotes discussion about responsible AI development and deployment
-
-## 🚀 Future Roadmap
-
-### Phase 1: Core Platform (Current)
-- ✅ Multi-AI query system
-- ✅ Basic debate visualization
-- ✅ Confidence scoring
-- 🔄 Enhanced bias detection
-
-### Phase 2: Advanced Features
-- 📋 Historical analysis and trends
-- 📋 User feedback integration
-- 📋 Real-time fact-checking with external sources
-- 📋 Advanced debate moderation AI
-
-### Phase 3: Research Platform
-- 📋 Academic research tools
-- 📋 Dataset generation for AI reliability research
-- 📋 Public API for researchers
-- 📋 Integration with academic institutions
-
-## 📞 Contact and Support
-
-### Get Help
-- 📧 **General Questions**: Create an issue with the `question` label
-- 🐛 **Bug Reports**: Use the `bug` label with detailed reproduction steps
-- 💡 **Feature Requests**: Submit with the `enhancement` label
-- 🔒 **Security Issues**: Email kmou20201305@g.kmou.ac.kr
-
-**🎯 Mission**: Rather than hiding AI failures, we embrace transparency in the verification process to create better AI-human collaboration models for the future.
+MIT License
